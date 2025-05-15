@@ -4,12 +4,12 @@
 # Description: This script provides a tool to encrypt and decrypt files.
 
 
-# Function to encrypt a file
+# Function to encrypt a file 
 encrypt_file() {
   local file=$1
   local password=$2
 
-  # Generate a random salt
+  # Generate a random salt for key derivation 
   local salt=$(openssl rand -hex 16)
 
   # Generate a key from the password and salt
@@ -29,20 +29,24 @@ decrypt_file() {
 }
 
 
+# Main function 
 main() {
-
+  # Check the number of arguments and display usage instructions if necessary 
   if [ $# -ne 3 ]; then
     echo "Usage: $0 <encrypt|decrypt> <file> <password>"
     exit 1
   fi
 
+  # Set the action, file, and password
   local action=$1
   local file=$2
   local password=$3
 
+  # Determine the action to take on the file
   if [ "$action" = "encrypt" ]; then
     encrypt_file "$file" "$password"
   elif [ "$action" = "decrypt" ]; then
+    # Check if the file has the .enc extension
     if [[ $file == *.enc ]]; then
       decrypt_file "$file" "$password"
     else
