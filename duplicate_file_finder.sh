@@ -45,8 +45,10 @@ for file_hash in "${!file_hashes[@]}"; do
     echo "2. Move all duplicates to a new directory"
     echo "3. Do nothing"
 
+    # Read the user's choice
     read choice
 
+    # Perform the chosen action
     case $choice in
       1)
         # Delete all duplicates
@@ -64,7 +66,7 @@ for file_hash in "${!file_hashes[@]}"; do
         echo "Duplicates moved to $directory/duplicates."
         ;;
       3)
-        # No action taken
+        # No action taken 
         ;;
       *)
         echo "Invalid choice."
