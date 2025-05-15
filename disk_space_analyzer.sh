@@ -4,26 +4,36 @@
 # Description: This script provides a tool to analyze disk space usage in a directory.
 
 
+# Function to display disk usage of a given directory
 get_disk_usage() {
+  
+   #   $1 - path: Directory path to analyze
   local path=$1
+   #   $2 - sort_by: Criterion to sort the output (e.g., "size" or "name")
   local sort_by=$2
+   #   $3 - filter_size: Minimum size in MB to filter the results
   local filter_size=$3
 
+  # Check the sorting criteria and execute the appropriate command
   if [ "$sort_by" = "size" ]; then
+    # Sort by size in descending order
     tree -a -d --du "$path" | sort -rn -k 2
   elif [ "$sort_by" = "name" ]; then
+    # Sort by name in ascending order
     tree -a -d --du "$path" | sort
   else
+    # Display unsorted disk usage
     tree -a -d --du "$path"
   fi
 
+  # Filter results by minimum size if specified
   if [ -n "$filter_size" ]; then
     awk -v filter_size="$filter_size" '$2 >= filter_size {print $0}'
   fi
 }
 
 
-# Main function 
+# Main function  
 main() {
   path="."
   while true; do
