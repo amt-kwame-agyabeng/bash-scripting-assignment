@@ -1,6 +1,6 @@
 #!/bin/bash
 # Author: Kwame Aboagye Agyabeng
-# Date: 2023-03-08
+# Date: 2025-05-15
 # Description: This script sorts files in the current directory into categories based on their extensions.
 # Usage: Run the script in the directory containing the files to be sorted.
 # The script is run with root privileges
