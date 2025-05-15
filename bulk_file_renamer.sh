@@ -2,7 +2,7 @@
 # Author: Kwame Aboagye Agyabeng
 # Date: 2025-05-15
 # Description: This script renames files in the current directory based on a specified pattern.
-# Usage: Run the script in the directory containing the files to be renamed.
+
 
 # Prompt the user for the directory containing the files to rename
 echo "Enter the directory containing the files to rename:"
