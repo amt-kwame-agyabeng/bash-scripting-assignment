@@ -1,4 +1,13 @@
 #!/bin/bash
+# Author: Kwame Aboagye Agyabeng
+# Date: 2025-05-15
+# Description: This script finds duplicate files in a given directory and offers choices to delete or move them.
+
+# Check if the user is root
+if [ "$(id -u)" != "0" ]; then
+  echo "This script must be run as root."
+  exit 1
+fi
 
 # Prompt the user for the directory to search for duplicates
 echo "Enter the directory to search for duplicates:"
@@ -51,7 +60,7 @@ for file_hash in "${!file_hashes[@]}"; do
     # Perform the chosen action
     case $choice in
       1)
-        # Delete all duplicates
+        # Delete all duplicates 
         for file in $duplicates; do
           rm "$file"
         done
