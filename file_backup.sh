@@ -7,14 +7,14 @@
 
   # Function to display backup menu options to the user
 display_menu() {
-     # Prints the menu and prompts the user for their choice
+  
+    # Prints the available backup options
     echo "Backup Options:"
     echo "1. Full Backup"
     echo "2. Partial Backup"
     echo "3. Compress Backup"
     echo "4. Schedule Backup"
     echo "5. Exit"
-
 }
 
 
