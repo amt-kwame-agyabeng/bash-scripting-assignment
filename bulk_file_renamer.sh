@@ -1,6 +1,6 @@
 #!/bin/bash
 # Author: Kwame Aboagye Agyabeng
-# Date: 2023-03-08
+# Date: 2025-05-15
 # Description: This script renames files in the current directory based on a specified pattern.
 # Usage: Run the script in the directory containing the files to be renamed.
 
@@ -16,19 +16,19 @@ read naming_convention
 echo "Enter the prefix to add to the filenames (e.g. 'prefix_' or leave blank for no prefix):"
 read prefix
 
-# Prompt the user for the suffix
+# Prompt the user for the suffix 
 echo "Enter the suffix to add to the filenames (e.g. '_suffix' or leave blank for no suffix):"
 read suffix
 
-# Prompt the user for the counter start value
+# Prompt the user for the counter start value 
 echo "Enter the starting value for the counter (leave blank for no counter):"
 read counter_start
 
-# Prompt the user for the date format
+# Prompt the user for the date format to use in the filenames
 echo "Enter the date format to use in the filenames (eg. '%Y%m%d' or leave blank for no date):"
 read date_format
 
-# Initialize the counter
+# Initialize the counter variable to the starting value if provided by the user
 counter=$counter_start
 
 # Loop through each file in the directory
@@ -51,7 +51,7 @@ for file in "$directory"/*; do
   fi
 
   # Add the prefix, suffix, and date
-  new_name=$new_name$prefix$suffix$(date +"$date_format")$file_extension
+  new_name=$new_name$prefix$suffix$(date +"$date_format").$file_extension
 
   # Rename the file
   mv "$file" "$directory/$new_name"
