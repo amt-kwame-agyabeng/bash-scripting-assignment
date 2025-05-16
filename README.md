@@ -25,7 +25,7 @@ To run the script you use this command:
 ./file-sorting.sh
 
 ```
----
+
 
 ### 2. Bulk File Renamer (`bulk_file_renamer.sh`)
 
@@ -40,7 +40,7 @@ Renames files in a specified directory based on user-defined naming conventions 
 **Usage:**  
 Run the script and provide the directory, naming convention, prefix, suffix, counter start, and date format when prompted.
 
----
+
 
 **Run:**
 To run the script you use this command:
@@ -71,7 +71,7 @@ To run the script you use this command:
 
 ```
 
----
+
 
 
 ### 4. File Backup System (`file_backup.sh`)
@@ -96,7 +96,6 @@ To run the script you use this command:
 
 ```
 
----
 
 ### 5. Disk Space Analyzer (`disk_space_analyzer.sh`)
 
@@ -119,9 +118,6 @@ To run the script you use this command:
 
 ```
 
-
----
-
 ### 6. File Encryption Tool (`file_encrption_tool.sh`)
 
 **Description:**  
@@ -141,8 +137,6 @@ To run the script you use this command:
 ./file-crypto.sh <encrypt|decrypt> <file> <password>
 
 ```
-
----
 
 ### 7. File Sync Utility (`file_sync_utility.sh`)
 
