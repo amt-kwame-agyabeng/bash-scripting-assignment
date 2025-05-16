@@ -1,4 +1,4 @@
-Overview
+## Overview
 This repository contains a collection of Bash scripts designed to automate common file management, backup, encryption, and system tasks. Each script is self-contained and user-friendly with prompts or command-line argument usage.
 
 ---
